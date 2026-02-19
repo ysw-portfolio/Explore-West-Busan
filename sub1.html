@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>서쪽마실</title>
+    <!-- 웹폰트 연결 -->
+    <!-- font-family: "Pretendard Variable"; -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <!-- font-family: 'NanumSquareRoundLight', 'NanumSquareRound', 'NanumSquareRoundBold', 'NanumSquareRoundExtraBold';  -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/header/favicon.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style_sub1.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header S -->
+        <div id="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./images/header/logo.svg" alt="서쪽마실 logo">
+                </a>
+            </h1>
+
+            <ul class="util">
+                <li>
+                    <div class="search_bar">
+                        <form action="" method="get">
+                            <input type="search" name="search" id="search" placeholder="검색">
+                        </form>
+                    </div><!-- .search_bar -->
+                </li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul><!-- .util -->
+
+            <div id="nav">
+                <ul class="gnb">
+                    <li><!-- 1 -->
+                        <a href="./sub1.html">여행 안내</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">지역별 안내</a></li>
+                            <li><a href="#">유형별 안내</a></li>
+                            <li><a href="#">여행 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 2 -->
+                        <a href="./sub2.html">코스 추천</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">테마별 안내</a></li>
+                            <li><a href="#">일정별 코스</a></li>
+                            <li><a href="#">맞춤 추천</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 3 -->
+                        <a href="./sub3.html">로컬 이야기</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">동네 이야기</a></li>
+                            <li><a href="#">로컬 가게</a></li>
+                            <li><a href="#">사람들</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub4.html">서쪽마실 소개</a></li>
+                </ul><!-- .gnb -->
+            </div><!-- .nav -->
+
+        </div><!-- #header -->
+        <!-- header E -->
+
+        <!-- sub visual S -->
+        <section class="sub-visual">
+            <div class="sub-visual-inner">
+                <p>여행 안내</p>
+                <h2>지역별 안내</h2>
+            </div>
+        </section>
+        <!-- sub visual E -->
+
+        <!-- region tab -->
+        <section class="region-tab">
+            <ul>
+                <li class="active"><a href="#" class="tab">사하구</a></li>
+                <li><a href="#" class="tab">강서구</a></li>
+                <li><a href="#" class="tab">사상구</a></li>
+                <li><a href="#" class="tab">서구</a></li>
+            </ul>
+        </section>
+
+        <!-- region intro -->
+        <section class="region-intro">
+
+            <!-- 위 물결 -->
+            <div class="wave wave-top">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                    <path d="M0,40 C240,90 480,0 720,30 960,60 1200,90 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
+                </svg>
+            </div>
+
+            <div class="region-inner">
+
+                <!-- map -->
+                <div class="region-map" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                    <img src="./images/sub1/map_saha.png" alt="사하구 지도">
+                </div>
+
+                <!-- text -->
+                <div class="region-text" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <h3>사하구</h3>
+                    <p class="region-desc">
+                        "노을이 하루를 마무리해 주는 동네"
+                    </p>
+                    <p>
+                        바다와 강이 만나는 사하구에서는 목적 없이 걷다 보면 어느새 노을 앞에 서게 됩니다 <br>
+                        일상의 끝에서 가장 느린 여행이 시작되는 곳, 서부산의 대표적인 풍경을 만날 수 있는 동네입니다
+                    </p>
+
+                    <ul class="region-tags">
+                        <li class="category">
+                            <a href="#">자연·생태</a>
+                        </li>
+                        <li class="category active">
+                            <a href="#">문화·역사</a>
+                        </li>
+                        <li class="category">
+                            <a href="#">체험</a>
+                        </li>
+                        <li class="category">
+                            <a href="#">산책·힐링</a>
+                        </li>
+                    </ul>
+                </div><!-- .region-text -->
+            </div><!-- .region-inner -->
+
+            <!-- 아래 물결 -->
+            <div class="wave wave-bottom">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                    <path d="M0,30 C240,0 480,90 720,60 960,30 1200,0 1440,30 L1440,90 L0,90 Z" fill="#ffffff" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- culture history -->
+        <section class="place-section">
+            <h3 class="section-title">
+                문화·역사
+                <img src="./images/sub1/sub1_icon1.svg" alt="">
+            </h3>
+
+            <div class="place-list">
+
+                <!-- item 1 -->
+                <article class="place-item">
+                    <div class="thumb" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place1.png" alt="감천문화마을">
+                    </div>
+                    <div class="info">
+                        <h4>감천문화마을</h4>
+                        <p>
+                            감천문화마을은 한국전쟁 이후 피난민들이 모여 형성된 언덕 위 마을로, 사하구의 시간이 가장 선명하게 남아 있는 곳이다. 좁은 골목과 계단, 층층이 이어진 집들은 삶의
+                            흔적을 그대로 간직하고 있으며, 이후 예술과 도시재생을 통해 새로운 얼굴을 갖게 되었다. 화려한 관광지라기보다, 서부산 사람들의 생활과 기억이 겹겹이 쌓인 공간으로
+                            골목을 따라 걷다 보면 자연스럽게 이 동네의 이야기를 마주하게 된다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                <img src="./images/sub1/time.svg" alt="운영시간">
+                                <span>
+                                    09:00 - 18:00 (3월-10월) / 09:00 - 17:00 (11월~2월)
+                                </span>
+                            </p>
+                            <p>
+                                <img src="./images/sub1/phone.svg" alt="문의">
+                                <span>+82-51-204-1444</span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                            <a href="#" class="btn outline">홈페이지</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item -->
+
+                <!-- item 2 -->
+                <article class="place-item reverse">
+                    <div class="thumb" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place2.png" alt="부산현대미술관">
+                    </div>
+                    <div class="info">
+                        <h4>부산현대미술관</h4>
+                        <p>
+                            부산현대미술관은 낙동강 하구의 자연 위에 자리한 서부산의 대표적인 문화 공간이다. 단순한 전시장이 아닌, 생태·도시·사회를 주제로 한 현대미술을 통해 서부산의 맥락을
+                            새롭게 해석한다. 주변의 자연과 어우러진 건축은 미술관을 방문하는 경험 자체를 하나의 산책처럼 만들어준다. 자연과 예술, 사유가 함께 흐르는 공간으로 서부산의 현재를
+                            가장 현대적으로 보여준다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                <img src="./images/sub1/time.svg" alt="운영시간">
+                                <span>
+                                    화–일 10:00–18:00 (입장마감 17:30) ※ 월요일 및 공휴일 휴관
+                                </span>
+                            </p>
+                            <p>
+                                <img src="./images/sub1/phone.svg" alt="문의">
+                                <span>+82-51-220-7400</span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                            <a href="#" class="btn outline">홈페이지</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item reverse -->
+
+                <!-- item 3 -->
+                <article class="place-item">
+                    <div class="thumb" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place3.png" alt="임시수도기념관">
+                    </div>
+                    <div class="info">
+                        <h4>임시수도기념관</h4>
+                        <p>
+                            임시수도기념관은 한국전쟁 당시 부산이 임시수도로 기능하던 시기의 역사를 보존·전시하는 공간이다. 당시 대통령 관저로 사용된 건물을 활용해 조성되었으며, 전쟁 속 국가
+                            운영과 피란민의 삶, 국제 정세를 다양한 자료로 소개한다. 부산이 겪은 근현대사의 의미를 되새길 수 있는 대표적인 역사 교육 장소다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                <img src="./images/sub1/time.svg" alt="운영시간">
+                                <span>
+                                    화–일 09:00–18:00 ※ 월요일 및 1월1일 휴관
+                                </span>
+                            </p>
+                            <p>
+                                <img src="./images/sub1/phone.svg" alt="문의">
+                                <span>+82-51-244-6345</span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                            <a href="#" class="btn outline">홈페이지</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item -->
+
+                <!-- item 4 -->
+                <article class="place-item reverse">
+                    <div class="thumb" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place4.png" alt="을숙도문화회관">
+                    </div>
+                    <div class="info">
+                        <h4>을숙도문화회관</h4>
+                        <p>
+                            을숙도 문화회관은 오랜 시간 지역 주민과 함께해 온 사하구의 생활 문화 공간이다. 대규모 관광 시설보다는 공연과 전시, 문화 프로그램을 통해 동네의 일상에 가까운
+                            문화를 만들어 왔다. 화려함보다는 친근함이 느껴지는 이곳은 서부산의 문화가 어떻게 지역 속에서 자라왔는지를 보여준다. 여행 중 잠시 들러 지역의 문화 온도를 느끼기에
+                            적당한 공간이다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                <img src="./images/sub1/time.svg" alt="운영시간">
+                                <span>
+                                    공연/프로그램 일정에 따라 상이 (각 공연/전시 페이지 참고)
+                                </span>
+                            </p>
+                            <p>
+                                <img src="./images/sub1/phone.svg" alt="문의">
+                                <span>공연예술팀: +82-51-220-5811~5814 </span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                            <a href="#" class="btn outline">홈페이지</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item reverse -->
+
+                <!-- item 5 -->
+                <article class="place-item">
+                    <div class="thumb" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place5.png" alt="홍티아트센터">
+                    </div>
+                    <div class="info">
+                        <h4>홍티아트센터</h4>
+                        <p>
+                            홍티아트센터는 옛 공간을 재생해 만들어진 서부산의 예술 플랫폼으로, 과거의 흔적 위에 새로운 창작이 더해진 장소다. 전시와 레지던시 프로그램을 통해 지역과 예술가,
+                            공간이 느슨하게 연결된다. 조용한 분위기 속에서 예술을 마주할 수 있어 관광지보다는 발견에 가까운 공간이다. 서부산이 가진 변화의 가능성과 현재진행형의 문화 흐름을
+                            보여준다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                <img src="./images/sub1/time.svg" alt="운영시간">
+                                <span>
+                                    월–토 10:00–18:00 (토요일 전시·행사 중심 운영) ※ 일요일 휴무
+                                </span>
+                            </p>
+                            <p>
+                                <img src="./images/sub1/phone.svg" alt="문의">
+                                <span>+82-51-263-8661~3</span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                            <a href="#" class="btn outline">홈페이지</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item -->
+
+                <!-- item 6 -->
+                <article class="place-item reverse">
+                    <div class="thumb" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                        <img src="./images/sub1/place6.png" alt="감천항 일대">
+                    </div>
+                    <div class="info">
+                        <h4>감천항 일대</h4>
+                        <p>
+                            감천항과 포구 일대는 사하구가 바다와 함께 살아온 시간을 고스란히 간직한 공간이다. 어선과 항만 시설, 오래된 건물들은 이 지역의 산업과 노동의 역사를 말없이
+                            전한다. 관광지로 꾸며지지 않은 풍경 속에서 서부산의 일상이 자연스럽게 드러난다. 항구를 따라 걷다 보면 바다와 함께 살아온 사람들의 삶과 도시의 또 다른 얼굴을
+                            발견하게 된다.
+                        </p>
+                        <div class="place-meta">
+                            <p>
+                                ※ 감천항은 공식 관광 시설이 아닌 지역명소로, 별도 운영시간/연락처가 없습니다.
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn">오시는 길</a>
+                        </div>
+                    </div><!-- .info -->
+                </article><!-- .place-item reverse -->
+            </div>
+        </section>
+        <!-- sub visual E -->
+
+
+        <!-- footer S -->
+        <section id="footer-area">
+
+            <!-- 하단 footer -->
+            <footer id="footer">
+                <div class="footer-inner">
+
+                    <!-- 좌측 로고 -->
+                    <div class="footer-left">
+                        <a href="./index.html">
+                            <h1 class="footer-logo">
+                                <img src="./images/footer/logo_grey.svg" alt="서쪽마실">
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 중앙 정보 -->
+                    <div class="footer-center">
+                        <p><strong>고객센터</strong> 051-245-1650</p>
+                        <p><strong>비즈니스</strong> westbusan_masil@gmail.com</p>
+
+                        <div class="footer-sns">
+                            <a href="#" aria-label="Instagram" class="sns insta"></a>
+                            <a href="#" aria-label="Youtube" class="sns youtube"></a>
+                            <a href="#" aria-label="Naver" class="sns naver"></a>
+                        </div>
+                    </div>
+
+                    <!-- 우측 링크 -->
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">사업자정보조회</a>
+                        </div>
+
+                        <p class="footer-info">
+                            서쪽마실 | 사업자등록번호 : 871-87-02570<br>
+                            통신판매업신고번호 : 부산중구 0058 | 주소 : 부산 중구 중앙대로 26 10층
+                        </p>
+
+                        <p class="copyright">
+                            COPYRIGHT © Seojok Masil. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+                </div><!-- .footer-inner -->
+            </footer><!-- #footer -->
+        </section>
+        <!-- footer E -->
+
+        <!-- TOP 버튼 -->
+        <button class="btn-top" type="button" aria-label="페이지 상단으로 이동">
+            TOP
+        </button>
+
+    </div><!-- #wrap -->
+
+    <!-- jQuery 오픈소스 : 로컬방식 -->
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <!-- 제어코드 연결 -->
+    <script src="js/script_sub1.js"></script>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS 제어구문 -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

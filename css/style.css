@@ -1,0 +1,1770 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+}
+
+#wrap {
+    min-width: 1360px;
+}
+
+/* ==================== header ==================== */
+#header {
+    width: 1320px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    /* justify-content: space-between; */
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    margin-top: 22px;
+}
+
+/* util */
+.util {
+    position: absolute;
+    top: 26px;
+    right: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.search_bar {
+    width: 100px;
+    border: 1px solid #C1C7D3;
+    padding: 2px 10px 2px 30px;
+    border-radius: 30px;
+    background: url(../images/header/search.png) no-repeat 10px center;
+}
+
+.search_bar input {
+    display: block;
+    width: 100%;
+    border: none;
+    /* 테두리 없애기 */
+    background-color: transparent;
+    /* 배경 투명 */
+    outline: none;
+    /* 클릭 시 테두리 없애기 */
+}
+
+/* gnb */
+.gnb {
+    position: absolute;
+    left: 50%;
+    top: 26px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.gnb li {
+    position: relative;
+    text-align: center;
+}
+
+.gnb>li>a {
+    display: block;
+    margin: 0 30px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gnb>li>a:hover {
+    color: #F46F45;
+}
+
+.gnb li:hover .submenu {
+    display: block;
+    /* 서브메뉴 나타나기 */
+}
+
+/* submenu */
+.submenu {
+    /* 포지션, 위치값, 너비 상속, z-index */
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* 서브메뉴 숨기기 */
+    display: none;
+}
+
+.submenu li a {
+    /* 속성바꾸기, 배경색, 글자색, 
+    가운데 문단 정렬, 여백 상하, 테두리상, 테두리하 */
+    display: block;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 6px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.submenu li a:hover {
+    background-color: #F46F45;
+    color: #fff;
+}
+
+/* ==================== visual ==================== */
+#visual {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+#visual .swiper,
+#visual .swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#visual .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text {
+    position: absolute;
+    left: 260px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    max-width: 420px;
+    text-align: left;
+}
+
+.slide-text h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.slide-text .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background-color: #172742;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* visual swiper*/
+#visual .swiper {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+#visual .swiper-slide {
+    width: 100%;
+    height: 100%;
+    /*  슬라이드 안에 글자를 넣은 경우 */
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+#visual .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 또는 영상 요소가 크기 및 비율에 맞게 잘리면서도 꽉 차게하는 속성 */
+}
+
+#visual .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 기본 after 제거 (안전용) */
+#visual .swiper-button-prev::after,
+#visual .swiper-button-next::after {
+    display: none;
+}
+
+/* 화살표 공통 */
+#visual .swiper-button-prev,
+#visual .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+/* 왼쪽 */
+#visual .swiper-button-prev {
+    background-image: url(../images/main/visual/btn_left.png);
+    left: 60px;
+}
+
+/* 오른쪽 */
+#visual .swiper-button-next {
+    background-image: url(../images/main/visual/btn_right.png);
+    right: 60px;
+}
+
+/* Swiper 기본 네비게이션 아이콘 색 제거(v12 핵심) */
+#visual {
+    --swiper-navigation-color: transparent;
+}
+
+/* hover 시 살짝 강조 */
+#visual .swiper-button-prev:hover,
+#visual .swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* 왼쪽 화살표 → 왼쪽으로 살짝 */
+#visual .swiper-button-prev:hover {
+    transform: translateX(-6px);
+}
+
+/* 오른쪽 화살표 → 오른쪽으로 살짝 */
+#visual .swiper-button-next:hover {
+    transform: translateX(6px);
+}
+
+/* 불릿 위치 바꾸기 */
+#visual .swiper-pagination-fraction,
+#visual .swiper-pagination-custom,
+#visual .swiper-horizontal>.swiper-pagination-bullets,
+#visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 20px);
+}
+
+/* 불릿 색상 바꾸기 */
+#visual .swiper-pagination-bullet {
+    /* 선택안된 불릿기호 */
+    background-color: #fff;
+    opacity: 1;
+    /* box-shadow: 1px 1px 5px #000; */
+    /*    width: 15px;
+    height: 15px; */
+    margin: 0 10px !important;
+    /* !important : 다른 곳에 적용된 값을 
+            무시하고 제일 첫번째로 적용된다. */
+}
+
+#visual .swiper-pagination-bullet-active {
+    /* 선택된 불릿 기호 */
+    background-color: #172742;
+    width: 40px;
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+/* sunset info */
+#sunset-info {
+    width: 100%;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.sunset-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* 날짜 */
+.sunset-inner .date {
+    opacity: 0.9;
+}
+
+/* 일몰 시각 */
+.sunset-inner .sunset-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sunset-inner .sunset-time strong {
+    font-weight: 600;
+}
+
+/* 아이콘 */
+.sunset-inner .icon {
+    font-size: 16px;
+}
+
+/* 카운트다운 */
+/* .sunset-inner .countdown {
+    opacity: 0.9;
+} */
+
+.sunset-inner strong {
+    color: #ffb703;
+    /* 포인트 컬러 */
+}
+
+/* 일몰 전 */
+.sunset-inner .countdown {
+    font-size: 16px;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+
+/* 일몰 후 */
+.sunset-inner .countdown.ended {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffd166;
+    opacity: 1;
+    letter-spacing: -0.02em;
+}
+
+/*  container  */
+/* ==================== intro-section ==================== */
+.intro-section {
+    width: 100%;
+    padding: 140px 0;
+    background-color: #fff;
+}
+
+.intro-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+/* 이미지 영역 */
+.intro-image {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+/* 텍스트 영역 */
+.intro-text {
+    flex: 1;
+}
+
+.intro-eyebrow {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 16px;
+}
+
+.intro-text h2 {
+    font-size: 38px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 28px;
+    word-break: keep-all;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Scroll Animation 기본 */
+.fade-up,
+.slide-in {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+/* 이미지: 아래 → 위 */
+.fade-up {
+    transform: translateY(40px);
+}
+
+/* 텍스트: 오른쪽 → 제자리 */
+.slide-in {
+    transform: translateX(40px);
+}
+
+/* 활성화 되었을 때 */
+.animate-section.is-active .fade-up,
+.animate-section.is-active .slide-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* 살짝 시간차 주기 */
+.animate-section.is-active .slide-in {
+    transition-delay: 0.15s;
+}
+
+/* ==================== 여행 안내 ==================== */
+.travel-guide {
+    position: relative;
+    background-color: #eef7fa;
+    padding: 140px 0;
+    overflow: hidden;
+}
+
+/* 물결 공통 */
+.wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 0;
+}
+
+.wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 위 / 아래 위치 */
+.wave-top {
+    top: 0;
+}
+
+.wave-bottom {
+    bottom: 0;
+}
+
+/* 내부 콘텐츠 */
+.guide-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* 타이틀 */
+.guide-title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.guide-title p {
+    color: #666;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* 콘텐츠 영역 */
+.guide-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+ /* === 지도 영역 === */
+.map-area {
+    position: relative;
+    width: 700px;  
+}
+
+.map-area img {
+    width: 100%;
+    display: block;
+}
+
+/* 구 이름 공통 */
+.district {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3C4A3E;   
+    /* background: rgba(255, 248, 232, 0.85); */
+    padding: 0 8px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 강서구 */
+.gangseo {
+    top: 36%;
+    left: 50%;
+}
+
+/* 사상구 */
+.sasang {
+    top: 34%;
+    left: 75%;
+}
+
+/* 사하구 */
+.saha {
+    top: 60%;
+    left: 70%;
+}
+
+/* 서구 */
+.seo {
+    top: 48%;
+    left: 85%;
+}
+
+/* 아이콘을 텍스트 위에 배치 */
+.district .icon {
+    display: block;
+    margin: 0 auto 1px;
+    width: 25px;
+    height: 25px;
+    fill: #172742; 
+}
+
+/* 지도 위 명소 */
+.spot {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    color: #747c75; 
+    text-align: center;
+    line-height: 1;
+}
+
+/* 강서구 */
+.spot1 {
+    top: 70%;
+    left: 18%;
+}
+
+.spot2 {
+    top: 28%;
+    left: 58%;
+}
+
+.spot3 {
+    top: 15%;
+    left: 70%;
+}
+
+.spot4 {
+    top: 45%;
+    left: 60%;
+}
+
+.spot7 {
+    top: 36%;
+    left: 30%;
+}
+
+.spot8 {
+    top: 60%;
+    left: 30%;
+}
+
+/* 사상구 */
+.spot5 {
+    top: 27%;
+    left: 70%;
+}
+
+.spot6 {
+    top: 36%;
+    left: 84%;
+}
+
+/* 사하구 */
+.spot9 {
+    top: 80%;
+    left: 70%;
+}
+
+.spot10 {
+    top: 74%;
+    left: 65%;
+}
+
+.spot11 {
+    top: 56%;
+    left: 75%;
+}
+
+.spot12 {
+    top: 60%;
+    left: 60%;
+}
+
+/* 서구 */
+.spot13 {
+    top: 70%;
+    left: 90%;
+}
+
+.spot14 {
+    top: 60%;
+    left: 90%;
+}
+
+/* === 오른쪽 === */
+.guide-right {
+    /* flex: 1; */
+}
+
+/* 상단 설명 */
+.guide-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.guide-desc h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* 지역 버튼 */
+.district-tabs {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    /* margin-bottom: 20px; */
+}
+
+.district-tabs .tab {
+    padding: 4px 24px;
+    border-radius: 20px;
+    background-color: #172742;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.district-tabs .tab:hover {
+    background-color: #F46F45;
+}
+
+/* 정보 박스 */
+.info-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 650px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 헤더 */
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.district-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.district-title img {
+    width: 22px;
+    height: 22px;
+}
+
+/* .district-text {
+    padding: 10px;
+} */
+
+.more-link {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.more-link:hover {
+    color: #F46F45;
+}
+
+/* 카테고리 버튼 */
+.category-tabs {
+    display: flex;
+    /* justify-content: center; */
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+.category-tabs .category {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+    border-radius: 20px;
+    background-color: #CFE1FB;
+    color: #172742;
+    transition: all 0.25s;
+}
+
+.category-tabs .category:hover,
+.category-tabs .category.active {
+    background-color: #FBC4B2;
+}
+
+/* 스팟 리스트 */
+.spot-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 24px;
+}
+
+/* 카드 하나 */
+.spot-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+/* 동그란 이미지 */
+.spot-list li img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.spot-list strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.spot-list p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ==================== 추천 스팟 ==================== */
+.recommend-spot {
+    position: relative;
+    padding: 50px 0;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+/* 배경 아이콘 */
+.spot-bg-icons .bg-icon {
+    position: absolute;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.icon1 {
+    top: 210px;
+    left: 300px;
+}
+
+.icon2 {
+    bottom: 90px;
+    left: 580px;
+}
+
+.icon3 {
+    top: 160px;
+    right: 600px;
+}
+
+.icon4 {
+    bottom: 140px;
+    right: 300px;
+}
+
+/* 내부 */
+.recommend-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 타이틀 */
+.recommend-title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.recommend-title p {
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 15px;
+}
+
+/* 슬라이더 */
+.spot-slider {
+    overflow: hidden;
+}
+
+.spot-track {
+    display: flex;
+    gap: 40px;
+    animation: slideLoop 20s linear infinite;
+}
+
+/* 카드 */
+.spot-item {
+    /* min-width: 220px; */
+    text-align: center;
+}
+
+.spot-item img {
+    /* width: 220px; */
+    /* height: 260px; */
+    object-fit: cover;
+    /* border-radius: 120px 120px 40px 40px; */
+    margin-bottom: 14px;
+}
+
+.spot-item p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.spot-item strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.spot-item-text1 strong {
+    color: #C27A07;
+}
+
+.spot-item-text2 strong {
+    color: #F58AA6;
+}
+
+.spot-item-text3 strong {
+    color: #2D7648;
+}
+
+.spot-item-text4 strong {
+    color: #3867CA;
+}
+
+
+/* 무한 슬라이드 */
+@keyframes slideLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==================== 추천 코스 ==================== */
+
+.recommend-course {
+    position: relative;
+    background-color: #eef7fa;
+    padding: 160px 0;
+    overflow: hidden;
+}
+
+.course-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 물결 공통 */
+.wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 0;
+}
+
+.wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 위 / 아래 위치 */
+.wave-top {
+    top: 0;
+}
+
+.wave-bottom {
+    bottom: 0;
+}
+
+/* 타이틀 */
+.course-title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.course-title p {
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 15px;
+}
+
+/* 상단 버튼 */
+.course-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 60px;
+}
+
+.course-tab {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #172742;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.course-tab:hover,
+.course-tab.active {
+    background-color: #F46F45;
+}
+
+/* 리스트 */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* 카드 */
+.course-item {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 48px 28px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 썸네일 */
+.course-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 26px;
+}
+
+/* 정보 */
+.course-info {
+    padding: 10px;
+}
+
+.course-item strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.course-item p {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #555;
+}
+
+/* hover / active */
+/* .course-item.active, */
+.course-item:hover {
+    background-color: #fff;
+}
+
+/* .course-item.active img, */
+.course-item:hover img {
+    filter:
+        invert(48%) sepia(85%) saturate(1800%) hue-rotate(336deg) brightness(95%) contrast(100%);
+}
+
+/* ==================== 로컬 가게 ==================== */
+.local-shop {
+    padding: 120px 0;
+}
+
+.local-shop .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 타이틀 */
+.local-shop-title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.local-shop-title p {
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.shop-slider-wrap {
+    position: relative;
+}
+
+/* 슬라이드 영역 */
+.shop-slider {
+    overflow: hidden;
+    cursor: grab;
+    padding: 16px 0 32px;
+}
+
+.shop-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* 카드 */
+.shop-card {
+    flex: 0 0 280px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.shop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* 이미지 */
+.shop-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;    
+}
+
+/* 텍스트 */
+.shop-info {
+    padding: 18px;
+}
+
+.shop-tag {
+    font-size: 12px;
+    color: #F46F45;
+}
+
+.shop-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #172742;
+    margin-top: 6px;
+}
+
+.shop-desc {
+    font-size: 14px;
+    color: #6b7a90;
+    margin: 8px 0;
+}
+
+.shop-location {
+    font-size: 13px;
+    color: #9aa8bb;
+}
+
+/* 화살표 */
+.shop-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 아이콘 */
+.shop-arrow::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #172742;
+    border-right: 2px solid #172742;
+    margin: auto;
+}
+
+.shop-arrow.prev {
+    left: -80px;
+}
+
+.shop-arrow.prev::before {
+    transform: rotate(-135deg);
+}
+
+.shop-arrow.next {
+    right: -70px;
+}
+
+.shop-arrow.next::before {
+    transform: rotate(45deg);
+}
+
+.shop-arrow {
+    top: 50%;
+}
+
+.shop-arrow:hover::before {
+    border-color: #F46F45;
+}
+
+
+/* ==================== 이벤트 배너 슬라이드 ==================== */
+.event-banner {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 슬라이더 기준 */
+.event-banner-slider {
+    aspect-ratio: 1320 / 200;
+    /* width: 100%; */
+    max-width: 1320px;   /* 추가 */
+    margin: 0 auto;      /* 가운데 정렬 */
+    overflow: hidden;
+    position: relative;
+}
+
+/* 트랙 */
+.event-banner-track {
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+    /* transition: transform 0.6s ease; */
+}
+
+/* 슬라이드 1장 = slider 100% */
+.event-banner-track a {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+/* 이미지 */
+.event-banner-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.event-banner-track a:hover img {
+    /* transform: scale(1.02); */
+}
+
+/* ==================== SNS SECTION ==================== */
+.sns-section {
+    padding: 80px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.sns-inner {
+    width: 100%;
+}
+
+/* 타이틀 */
+.sns-title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+/* 슬라이더 */
+.sns-slider {
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.sns-slider.dragging {
+    cursor: grabbing;
+}
+
+.sns-slider.dragging a {
+    pointer-events: none;
+}
+
+.sns-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+    user-select: none;
+}
+
+/* hover 시 전체 정지 */
+.sns-slider:hover .sns-track {
+    animation-play-state: paused;
+}
+
+/* 아이템 */
+.sns-item {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.sns-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* hover 강조 (아주 미세하게) */
+.sns-item:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== SNS 아이콘 오버레이 ==== */
+.sns-item {
+    position: relative;
+}
+
+/* 오버레이 배경 */
+.sns-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* hover 시 오버레이 등장 */
+.sns-item:hover .sns-overlay {
+    opacity: 1;
+}
+
+/* 아이콘 공통 */
+.sns-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+/* 아이콘 살짝 튀어나오게 */
+.sns-item:hover .sns-icon {
+    transform: scale(1.05);
+}
+
+/* 인스타 */
+.sns-icon.instagram {
+    background-image: url("../images/main/sns/icon_instagram.svg");
+    background-size: 28px 28px;
+}
+
+/* 네이버 */
+.sns-icon.naver {
+    background-image: url("../images/main/sns/icon_naver.svg");
+    background-size: 20px 20px;
+}
+
+/* ==================== FOOTER ==================== */
+#footer-area {
+    position: relative;
+}
+
+/* ===== footer 풍경 영역 ===== */
+.footer-landscape {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #fff;
+    background-image: url(../images/footer/footer_bg.png);
+    
+}
+
+/* 하늘 */
+.footer-sky {
+    position: absolute;
+    inset: 0;
+    animation: sky-color 30s linear infinite;
+    z-index: 1;
+}
+
+/* 태양 */
+.footer-sun {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f39f18;
+    left: 10%;
+    top: 70%;
+    animation: sun-move 30s linear infinite;
+    box-shadow: 0 0 40px rgba(255, 170, 0, 0.8);
+    z-index: 2;
+}
+
+/* 태양 이동 */
+@keyframes sun-move {
+
+    /* 시작 : 파도 뒤 (보이지 않음) */
+    0% {
+        opacity: 0;
+        top: 82%;
+        left: 10%;
+        background-color: rgba(244, 111, 69, 0.35);
+        box-shadow: 0 0 20px rgba(244, 111, 69, 0.3);
+    }
+
+    /* 떠오르기 시작 */
+    8% {
+        opacity: 1;
+        top: 70%;
+        left: 16%;
+        background-color: rgba(244, 111, 69, 0.85);
+        box-shadow: 0 0 35px rgba(244, 111, 69, 0.7);
+    }
+
+    /* 완만한 상승 */
+    18% {
+        top: 52%;
+        left: 28%;
+        background-color: rgba(255, 130, 80, 1);
+        box-shadow: 0 0 80px rgba(255, 150, 100, 0.9);
+    }
+
+    30% {
+        top: 35%;
+        left: 42%;
+        background-color: rgba(255, 130, 80, 1);
+        box-shadow: 0 0 80px rgba(255, 150, 100, 0.9);
+    }
+
+    /* 정점 (꺾임 방지용 완충 구간) */
+    40% {
+        top: 26%;
+        left: 50%;
+        background-color: rgba(244, 98, 58, 1);
+        box-shadow: 0 0 65px rgba(244, 98, 58, 0.85);
+    }
+
+    46% {
+        top: 27%;
+        left: 55%;
+    }
+
+    /* 부드러운 하강 시작 */
+    55% {
+        top: 38%;
+        left: 65%;
+        background-color: rgba(230, 85, 50, 0.95);
+        box-shadow: 0 0 45px rgba(230, 85, 50, 0.6);
+    }
+
+    65% {
+        top: 55%;
+        left: 75%;
+    }
+
+    /* 해 지는 지점 — 여기서 종료 */
+    72% {
+        top: 70%;
+        left: 85%;
+        opacity: 1;
+    }
+
+    /* 파도 뒤로 사라짐 */
+    78% {
+        top: 78%;
+        left: 85%;
+        opacity: 0;
+    }
+
+    /* 리셋 (안 보임) */
+    100% {
+        top: 82%;
+        left: 10%;
+        opacity: 0;
+        background-color: rgba(244, 111, 69, 0.35);
+    }
+}
+
+/* 섬 */
+.footer-island {
+    position: absolute;
+    bottom: 10px; /* 파도 최고점보다 살짝 위 */
+    left: 85%;
+    transform: translateX(-50%);
+    width: 213px; /* 섬 이미지에 맞게 조절 */
+    height: 251px;
+
+    background: url("../images/footer/island.png") no-repeat center bottom;
+    background-size: contain;
+
+    z-index: 3; /* 태양(2) < 섬 < 파도(3) → SVG가 위 */
+    pointer-events: none;
+}
+
+/* SVG 파도 */
+.wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+/* 기본 파도 애니메이션 */
+.wave-svg use {
+    animation: move-forever 40s linear infinite;
+}
+
+/* 레이어별 속도 차이 */
+.wave-svg use:nth-child(1) {
+    animation-duration: 4s;
+}
+
+.wave-svg use:nth-child(2) {
+    animation-duration: 7s;
+    animation-delay: -1.5s;
+}
+
+.wave-svg use:nth-child(3) {
+    animation-duration: 10s;
+}
+
+/* 파도 이동 */
+@keyframes move-forever {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 풍경 이미지 */
+.footer-landscape img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+/* ===== 하단 footer ===== */
+#footer {
+    overflow: hidden;
+    height: 200px;
+    background: #172742;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.footer-inner {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* ===== 좌측 ===== */
+.footer-left {
+    flex: 0 0 auto;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+/* ===== 중앙 ===== */
+.footer-center {
+    flex: 1;
+    padding: 0 60px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-sns {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-sns .sns {
+    width: 32px;
+    /* 박스 기준 통일 */
+    height: 32px;
+    display: flex;
+    /* 내부 정렬용 */
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 아이콘 */
+.sns.insta {
+    background-image: url("../images/footer/icon_instagram.svg");
+    background-size: 22px 22px;
+}
+
+.sns.youtube {
+    background-image: url("../images/footer/icon_youtube.svg");
+    background-size: 24px 24px;
+    transform: translateY(2px);
+}
+
+.sns.naver {
+    background-image: url("../images/footer/icon_naver.svg");
+    background-size: 18px 18px;
+}
+
+/* ===== 우측 ===== */
+.footer-right {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    margin-left: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* ===== TOP 버튼 ===== */
+.btn-top {
+    position: fixed;
+    right: 60px;          /* 콘텐츠 오른쪽 여백 */
+    bottom: 90px;        /* footer와 간섭 안 나게 */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: #ff7a45;  /* 서쪽마실 톤 */
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all .3s ease;
+    z-index: 100;
+}
+
+.btn-top:hover {
+    background: #FFB156;
+    color: #333;
+    transform: translateY(-4px);
+}
+
+/* top 스크롤 내렸을 때만 보이게 */
+.btn-top {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}

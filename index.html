@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>서쪽마실</title>
+    <!-- 웹폰트 연결 -->
+    <!-- font-family: "Pretendard Variable"; -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/header/favicon.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header S -->
+        <div id="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./images/header/logo.svg" alt="서쪽마실 logo">
+                </a>
+            </h1>
+
+            <ul class="util">
+                <li>
+                    <div class="search_bar">
+                        <form action="" method="get">
+                            <input type="search" name="search" id="search" placeholder="검색">
+                        </form>
+                    </div><!-- .search_bar -->
+                </li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul><!-- .util -->
+
+            <div id="nav">
+                <ul class="gnb">
+                    <li><!-- 1 -->
+                        <a href="./sub1.html">여행 안내</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">지역별 안내</a></li>
+                            <li><a href="#">유형별 안내</a></li>
+                            <li><a href="#">여행 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 2 -->
+                        <a href="./sub2.html">코스 추천</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">테마별 안내</a></li>
+                            <li><a href="#">일정별 코스</a></li>
+                            <li><a href="#">맞춤 추천</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 3 -->
+                        <a href="./sub3.html">로컬 이야기</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">동네 이야기</a></li>
+                            <li><a href="#">로컬 가게</a></li>
+                            <li><a href="#">사람들</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub4.html">서쪽마실 소개</a></li>
+                </ul><!-- .gnb -->
+            </div><!-- .nav -->
+
+        </div><!-- #header -->
+        <!-- header E -->
+
+        <!-- visual S -->
+        <div id="visual">
+            <!-- Swiper -->
+            <div class="swiper mainbanner">
+                <div class="swiper-wrapper">
+                    <!-- slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="./images/main/visual/main1.png " alt="메인배너">
+
+                        <div class="slide-text">
+                            <h2>하루의 끝을 닮은 풍경</h2>
+                            <p class="sub">
+                                노을이 지는 서쪽에서<br>
+                                천천히 걷는 여행을 시작합니다
+                            </p>
+                            <a href="#" class="btn">노을 코스 둘러보기</a>
+                        </div>
+                    </div><!-- .swiper-slide -->
+                    <!-- slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="./images/main/visual/main2.png" alt="메인배너">
+                        <div class="slide-text">
+                            <h2>
+                                손끝에 담긴<br>
+                                서부산의 이야기
+                            </h2>
+                            <p class="sub">
+                                다정한 손길과 일상의 리듬이 만나<br>
+                                고유한 이야기가 태어납니다
+                            </p>
+                            <a href="#" class="btn">로컬 공방 둘러보기</a>
+                        </div>
+                    </div><!-- .swiper-slide -->
+                    <!-- slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="./images/main/visual/main3.png" alt="메인배너">
+                        <div class="slide-text">
+                            <h2>
+                                일상 위로 펼쳐진
+                                새로운 시선
+                            </h2>
+                            <p class="sub">
+                                지금 이 풍경에서 시작하는<br>
+                                추천 여행 코스를 만나보세요
+                            </p>
+                            <a href="#" class="btn">맞춤 코스 둘러보기</a>
+                        </div>
+                    </div><!-- .swiper-slide -->
+                </div>
+                <!-- 화살표 버튼 태그 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- 불릿 버튼 -->
+                <div class="swiper-pagination"></div>
+            </div><!-- swiper mainbanner -->
+        </div><!-- #visual -->
+        <!-- visual E -->
+
+        <!-- sunset info S -->
+        <div id="sunset-info">
+            <div class="sunset-inner">
+                <p class="date" id="sunset-date"></p>
+
+                <p class="sunset-time">
+                    <span class="icon">
+                        <img src="./images/main/sunset.svg" alt="sunset_icon">
+                    </span>
+                    오늘의 일몰 시각 <strong id="sunset-time"></strong>
+                </p>
+
+                <p class="countdown">
+                    일몰까지 <strong id="sunset-countdown"></strong> 남았습니다.
+                </p>
+            </div>
+        </div><!-- #sunset-info -->
+        <!-- sunset info E -->
+
+        <!-- container S -->
+        <div id="container">
+            <!-- intro-section S -->
+            <section class="intro-section animate-section">
+                <div class="intro-inner">
+                    <div class="intro-image fade-up">
+                        <img src="./images/main/main_img.png" alt="서부산 여행 일러스트">
+                    </div><!-- .intro-image -->
+
+                    <div class="intro-text slide-in">
+                        <span class="intro-eyebrow">서쪽마실과 함께</span>
+                        <h2>
+                            하루의 끝에서 시작되는<br>
+                            서부산 여행을 만나보세요
+                        </h2>
+                        <p>
+                            노을이 스며드는 바다와 강, 동네를 걷듯 가볍게 머무는 시간 속에서<br>
+                            서부산만의 풍경과 로컬 이야기를 천천히 전합니다.<br>
+                            <br>
+                            빠르게 소비하는 관광이 아닌 걷고 보고 느끼며 남기는<br>
+                            서부산의 오늘을 기록하는 플랫폼입니다.
+                        </p>
+                    </div><!-- .intro-text -->
+                </div><!-- .intro-inner -->
+            </section>
+            <!-- intro-section E -->
+
+            <!-- travel guide section S -->
+            <section class="travel-guide">
+
+                <!-- 위 물결 -->
+                <div class="wave wave-top">
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                        <path d="M0,40 C240,90 480,0 720,30 960,60 1200,90 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+
+                <div class="guide-inner">
+
+                    <!-- 타이틀 -->
+                    <div class="guide-title" data-aos="fade-down" data-aos-duration="2000">
+                        <h2>
+                            여행 안내
+                            <img src="./images/main/icon1.svg" alt="여행 안내">
+                        </h2>
+                        <p>서부산의 다양한 관광명소를 지역별로 안내해드립니다</p>
+                    </div>
+
+                    <div class="guide-content">
+
+                        <!-- 지도 -->
+                        <div class="map-area" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine"
+                            data-aos-duration="1000">
+
+                            <img src="./images/main/map.png" alt="서부산 지도">
+
+                            <!-- 구 이름 -->
+                            <span class="district gangseo" data-aos="fade-down" data-aos-delay="500"
+                                data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                                <img src="./images/main/map_icon.svg" alt="위치 아이콘" class="icon">
+                                강서구
+                            </span>
+                            <span class="district sasang" data-aos="fade-down" data-aos-delay="700"
+                                data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                                <img src="./images/main/map_icon.svg" alt="위치 아이콘" class="icon">
+                                사상구
+                            </span>
+                            <span class="district saha" data-aos="fade-down" data-aos-delay="900"
+                                data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                                <img src="./images/main/map_icon.svg" alt="위치 아이콘" class="icon">
+                                사하구
+                            </span>
+                            <span class="district seo" data-aos="fade-down" data-aos-delay="1100"
+                                data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                                <img src="./images/main/map_icon.svg" alt="위치 아이콘" class="icon">
+                                서구
+                            </span>
+
+                            <!-- 명소 이름 -->
+                            <!-- 강서구 -->
+                            <span class="spot spot1" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                가덕도
+                            </span>
+
+                            <span class="spot spot2" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                김해국제공항
+                            </span>
+
+                            <span class="spot spot3" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                대저생태공원
+                            </span>
+
+                            <span class="spot spot4" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                맥도생태공원
+                            </span>
+
+                            <span class="spot spot7" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                렛츠런파크<br>부산경남
+                            </span>
+
+                            <span class="spot spot8" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                정거마을
+                            </span>
+
+                            <!-- 사상구 -->
+                            <span class="spot spot5" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                삼락생태공원
+                            </span>
+
+                            <span class="spot spot6" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                모라전통시장
+                            </span>
+
+                            <!-- 사하구 -->
+                            <span class="spot spot9" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                다대포<br>해수욕장
+                            </span>
+
+                            <span class="spot spot10" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                장림포구
+                            </span>
+
+                            <span class="spot spot11" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                승학산
+                            </span>
+
+                            <span class="spot spot12" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                을숙도
+                            </span>
+
+                            <!-- 서구 -->
+                            <span class="spot spot13" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                송도<br>해수욕장
+                            </span>
+
+                            <span class="spot spot14" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                                data-aos-duration="1500">
+                                천마산<br>하늘전망대
+                            </span>
+
+                        </div><!-- .map-area -->
+
+                        <!-- 오른쪽 -->
+                        <div class="guide-right" data-aos="fade-left" data-aos-offset="500"
+                            data-aos-easing="ease-in-sine" data-aos-duration="1000">
+
+                            <!-- 상단 설명 + 지역 버튼 -->
+                            <div class="guide-top">
+                                <div class="guide-desc">
+                                    <h3>
+                                        <img src="./images/main/icon_location.png" alt="지역별 안내" class="guide-icon">
+                                        지역별 안내
+                                    </h3>
+                                    <!-- <p class="district-text">
+                                        서부산의 다양한 관광명소를 지역별로 안내해드립니다
+                                    </p> -->
+                                </div>
+
+                                <div class="district-tabs">
+                                    <a href="#" class="tab">사하구</a>
+                                    <a href="#" class="tab">강서구</a>
+                                    <a href="#" class="tab">사상구</a>
+                                    <a href="#" class="tab">서구</a>
+                                </div>
+                            </div>
+
+                            <!-- 정보 박스 -->
+                            <div class="info-box">
+
+                                <div class="info-header">
+                                    <h3 class="district-title">
+                                        <img src="./images/main/saha_icon.png" alt="사하구">
+                                        사하구
+                                    </h3>
+                                    <a href="#" class="more-link">자세히 보기 +</a>
+                                </div>
+
+                                <div class="category-tabs">
+                                    <a href="#" class="category active">자연·생태</a>
+                                    <a href="#" class="category">문화·역사</a>
+                                    <a href="#" class="category">체험</a>
+                                    <a href="#" class="category">산책·힐링</a>
+                                </div>
+
+                                <ul class="spot-list">
+                                    <li>
+                                        <img src="./images/main/saha_spot1.png" alt="다대포 해수욕장">
+                                        <div class="spot-text">
+                                            <strong>다대포 해수욕장</strong>
+                                            <p>넓은 백사장과 해변<br>공원이 있는 노을 스폿</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="./images/main/saha_spot2.png" alt="노을나루길">
+                                        <div class="spot-text">
+                                            <strong>노을나루길</strong>
+                                            <p>다대포 해안과 하구를 따라<br>이어지는 산책로</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="./images/main/saha_spot3.png" alt="을숙도 생태공원">
+                                        <div class="spot-text">
+                                            <strong>을숙도 생태공원</strong>
+                                            <p>부산 대표 철새 도래지</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="./images/main/saha_spot4.png" alt="승학산 억새군락지">
+                                        <div class="spot-text">
+                                            <strong>승학산 억새군락지</strong>
+                                            <p>은빛 억새가 능선을 따라 펼쳐지는 공간</p>
+                                        </div>
+                                    </li>
+                                </ul><!-- .spot-list -->
+
+                            </div><!-- info-box -->
+                        </div><!-- guide-right -->
+                    </div><!-- .guide-content -->
+                </div><!-- .guide-inner -->
+
+                <!-- 아래 물결 -->
+                <div class="wave wave-bottom">
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                        <path d="M0,30 C240,0 480,90 720,60 960,30 1200,0 1440,30 L1440,90 L0,90 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+
+            </section><!-- .travel-guide E -->
+
+            <!-- recommend-spot section S -->
+            <section class="recommend-spot">
+
+                <!-- 배경 아이콘 -->
+                <div class="spot-bg-icons">
+                    <img src="./images/main/recommend-spot/bg_icon1.svg" class="bg-icon icon1" alt="">
+                    <img src="./images/main/recommend-spot/bg_icon2.svg" class="bg-icon icon2" alt="">
+                    <img src="./images/main/recommend-spot/bg_icon3.svg" class="bg-icon icon3" alt="">
+                    <img src="./images/main/recommend-spot/bg_icon4.svg" class="bg-icon icon4" alt="">
+                </div>
+
+                <div class="recommend-inner">
+
+                    <!-- 타이틀 -->
+                    <div class="recommend-title" data-aos="fade-down" data-aos-duration="2000">
+                        <h2>
+                            <img src="./images/main/icon2.svg" alt="추천 스팟">
+                            추천 스팟
+                        </h2>
+                        <p>지금 가장 주목받는 서부산 명소를 만나보세요</p>
+                    </div>
+
+                    <!-- 슬라이더 -->
+                    <div class="spot-slider">
+                        <ul class="spot-track">
+
+                            <!-- 1~8 -->
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot1.png" alt="장림포구">
+                                <div class="spot-item-text1">
+                                    <strong>문화·역사</strong>
+                                    <p>장림포구</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot2.png" alt="다대포해수욕장">
+                                <div class="spot-item-text2">
+                                    <strong>산책·힐링</strong>
+                                    <p>다대포해수욕장</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot3.png" alt="가덕도 연대봉">
+                                <div class="spot-item-text3">
+                                    <strong>자연·생태</strong>
+                                    <p>가덕도 연대봉</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot4.png" alt="삼락생태공원">
+                                <div class="spot-item-text3">
+                                    <strong>자연·생태</strong>
+                                    <p>삼락생태공원</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot5.png" alt="송도해상케이블카">
+                                <div class="spot-item-text4">
+                                    <strong>체험</strong>
+                                    <p>송도해상케이블카</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot6.png" alt="임시수도기념관">
+                                <div class="spot-item-text1">
+                                    <strong>문화·역사</strong>
+                                    <p>임시수도기념관</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot7.png" alt="송도구름산책로">
+                                <div class="spot-item-text2">
+                                    <strong>산책·힐링</strong>
+                                    <p>송도구름산책로</p>
+                                </div>
+                            </li>
+                            <li class="spot-item">
+                                <img src="./images/main/recommend-spot/spot8.png" alt="감천문화마을">
+                                <div class="spot-item-text1">
+                                    <strong>문화·역사</strong>
+                                    <p>감천문화마을</p>
+                                </div>
+                            </li>
+
+                        </ul><!-- spot-track -->
+                    </div><!-- .spot-slider -->
+                </div><!-- .recommend-inner -->
+            </section>
+            <!-- recommend-spot section S -->
+
+            <!-- recommend-course S -->
+            <section class="recommend-course">
+
+                <!-- 위 물결 -->
+                <div class="wave wave-top">
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                        <path d="M0,40 C240,90 480,0 720,30 960,60 1200,90 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+
+                <div class="course-inner">
+
+                    <!-- 타이틀 -->
+                    <div class="course-title" data-aos="fade-down" data-aos-duration="2000">
+                        <h2>
+                            추천 코스
+                            <img src="./images/main/icon3.svg" alt="추천 코스">
+                        </h2>
+                        <p>서부산을 더 깊이 즐길 수 있는 여행 동선을 제안합니다</p>
+                    </div>
+
+                    <!-- 상단 필터 버튼 -->
+                    <div class="course-tabs">
+                        <button class="course-tab active">테마별</button>
+                        <button class="course-tab">일정별</button>
+                        <button class="course-tab">맞춤추천</button>
+                    </div>
+
+                    <!-- 코스 리스트 -->
+                    <ul class="course-list">
+
+                        <!-- course 1 -->
+                        <li class="course-item active" data-aos="zoom-in-up" data-aos-offset="500"
+                            data-aos-duration="1500">
+                            <a href="#">
+                                <img src="./images/main/recommend-course/icon1.svg" alt="노을  코스">
+                                <strong>노을코스</strong>
+                                <p>
+                                    해가 지는 방향을 따라 걷다 보면<br>
+                                    자연스럽게 노을과 마주하는 코스
+                                </p>
+                            </a>
+                        </li>
+
+                        <!-- course 2 -->
+                        <li class="course-item" data-aos="zoom-in-up" data-aos-offset="500" data-aos-delay="300"
+                            data-aos-duration="1500">
+                            <a href="#">
+                                <img src="./images/main/recommend-course/icon2.svg" alt="자연생태 코스">
+                                <strong>자연·생태 코스</strong>
+                                <p>
+                                    강과 바다, 숲과 하늘 사이를<br>
+                                    천천히 걸으며 숨을 고르는 시간
+                                </p>
+                            </a>
+                        </li>
+
+                        <!-- course 3 -->
+                        <li class="course-item" data-aos="zoom-in-up" data-aos-offset="500" data-aos-delay="600"
+                            data-aos-duration="1500">
+                            <a href="#">
+                                <img src="./images/main/recommend-course/icon3.svg" alt="동네마실 코스">
+                                <strong>동네마실 코스</strong>
+                                <p>
+                                    골목과 시장, 일상의 풍경을 따라<br>
+                                    서부산을 가볍게 즐기는 코스
+                                </p>
+                            </a>
+                        </li>
+
+                        <!-- course 4 -->
+                        <li class="course-item" data-aos="zoom-in-up" data-aos-offset="500" data-aos-delay="900"
+                            data-aos-duration="1500">
+                            <a href="#">
+                                <img src="./images/main/recommend-course/icon4.svg" alt="미식 코스">
+                                <strong>미식 코스</strong>
+                                <p>
+                                    서부산의 하루를 맛으로 기억하는<br>
+                                    걷고 먹는 동네 미식 여행
+                                </p>
+                            </a>
+                        </li>
+                    </ul><!-- .course-list -->
+                </div><!-- .course-inner -->
+
+                <!-- 아래 물결 -->
+                <div class="wave wave-bottom">
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                        <path d="M0,30 C240,0 480,90 720,60 960,30 1200,0 1440,30 L1440,90 L0,90 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+
+            </section>
+            <!-- recommend-course E -->
+
+            <!-- local-shop S -->
+            <section id="local-shop" class="local-shop">
+                <div class="inner">
+
+                    <!-- 타이틀 -->
+                    <div class="local-shop-title" data-aos="fade-down" data-aos-duration="2000">
+                        <h2>
+                            <img src="./images/main/icon4.svg" alt="추천 스팟">
+                            로컬 가게
+                        </h2>
+                        <p>서부산에서 오래 사랑받아온 로컬 가게들을 소개합니다</p>
+                    </div>
+
+                    <div class="shop-slider-wrap">
+
+                        <!-- 왼쪽 화살표 -->
+                        <button class="shop-arrow prev" aria-label="이전"></button>
+
+                        <!-- 슬라이드 -->
+                        <div class="shop-slider" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="shop-track">
+
+                                <!-- card 1 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img1.png" alt="카페 만디">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">카페</span>
+                                        <h3 class="shop-name">카페 만디</h3>
+                                        <p class="shop-desc">
+                                            시즌별 인테리어와 넓은 창으로<br>
+                                            자연 풍경이 펼쳐진 언덕 위 뷰맛집 카페
+                                        </p>
+                                        <span class="shop-location">사하구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 2 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img2.png" alt="청월호야">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">공방</span>
+                                        <h3 class="shop-name">청월호야</h3>
+                                        <p class="shop-desc">
+                                            스테인드글라스 공방<br>
+                                            원데이클래스 운영
+                                        </p>
+                                        <span class="shop-location">사하구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 3 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img3.png" alt="다대포해양레포츠센터">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">체험</span>
+                                        <h3 class="shop-name">다대포해양레포츠센터</h3>
+                                        <p class="shop-desc">
+                                            다양한 해양레포츠교육 및<br>
+                                            체험프로그램 운영
+                                        </p>
+                                        <span class="shop-location">사하구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 4 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img4.png" alt="두루팜">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">체험</span>
+                                        <h3 class="shop-name">두루팜</h3>
+                                        <p class="shop-desc">
+                                            딸기와 블루베리를 체험할 수 있는<br>
+                                            100여년의 전통있는 체험농장
+                                        </p>
+                                        <span class="shop-location">강서구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 5 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img5.png" alt="강변조개구이">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">맛집</span>
+                                        <h3 class="shop-name">강변조개구이</h3>
+                                        <p class="shop-desc">
+                                            낙동강 바로 위에서 즐기는<br>
+                                            갈미조개 샤브샤브와 갈삼구이
+                                        </p>
+                                        <span class="shop-location">사하구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 6 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img6.jpg" alt="송도키친">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">맛집</span>
+                                        <h3 class="shop-name">송도키친</h3>
+                                        <p class="shop-desc">
+                                            송도해변의 멋진 오션뷰를 감상하며<br>
+                                            식사를 즐길 수 있는 레스토랑
+                                        </p>
+                                        <span class="shop-location">서구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 7 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img7.jpg" alt="히떼로스터리">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">카페</span>
+                                        <h3 class="shop-name">히떼로스터리 강서점</h3>
+                                        <p class="shop-desc">
+                                            푸른 공원뷰의 조용한 분위기에서 <br>
+                                            필터커피를 즐기기 좋은 강서구 카페
+                                        </p>
+                                        <span class="shop-location">강서구</span>
+                                    </div>
+                                </article>
+
+                                <!-- card 8 -->
+                                <article class="shop-card">
+                                    <div class="shop-thumb">
+                                        <img src="./images/main/local-shop/local_img8.jpg" alt="합천일류돼지국밥">
+                                    </div>
+
+                                    <div class="shop-info">
+                                        <span class="shop-tag">맛집</span>
+                                        <h3 class="shop-name">합천일류돼지국밥터</h3>
+                                        <p class="shop-desc">
+                                            진한 국물과 푸짐한 고기, 수제순대가<br>
+                                            특징인 부산 유명 돼지국밥 전문점
+                                        </p>
+                                        <span class="shop-location">사하구</span>
+                                    </div>
+                                </article>
+                            </div><!-- .shop-track -->
+                        </div><!-- .shop-slider -->
+
+                        <!-- 오른쪽 화살표 -->
+                        <button class="shop-arrow next" aria-label="다음"></button>
+
+                    </div><!-- .shop-slider-wrap -->
+                </div><!-- .inner -->
+            </section>
+            <!-- local-shop E -->
+
+            <!-- event-banner S -->
+            <section id="event-banner" class="event-banner">
+                <div class="event-banner-slider">
+
+                    <div class="event-banner-track">
+                        <!-- banner 1 -->
+                        <a href="#" class="event-banner-link">
+                            <img src="./images/main/event-banner/banner1.png" alt="이벤트 배너1">
+                        </a>
+
+                        <!-- banner 2 -->
+                        <a href="#" class="event-banner-link">
+                            <img src="./images/main/event-banner/banner2.png" alt="이벤트 배너 2">
+                        </a>
+
+                        <!-- banner 3 -->
+                        <a href="#" class="event-banner-link">
+                            <img src="./images/main/event-banner/banner3.png" alt="이벤트 배너 3">
+                        </a>
+                    </div><!-- .event-banner-track -->
+                </div><!-- .event-banner-slider -->
+            </section>
+            <!-- event-banner E -->
+
+            <!-- sns S -->
+            <section id="sns-section" class="sns-section">
+                <div class="sns-inner">
+
+                    <!-- 타이틀 -->
+                    <div class="sns-title" data-aos="fade-down" data-aos-duration="2000">
+                        <h2>
+                            sns
+                            <img src="./images/main/icon5.svg" alt="추천 스팟">
+                        </h2>
+                    </div>
+
+                    <div class="sns-slider" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="sns-track">
+                            <!-- item 1 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns1.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 2 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns2.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 3 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns3.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 4 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns4.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon naver" aria-label="네이버"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 5 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns5.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 6 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns6.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 7 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns7.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon naver" aria-label="네이버"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 8 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns8.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 9 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns9.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon naver" aria-label="네이버"></span>
+                                </div>
+                            </a>
+
+                            <!-- item 10 -->
+                            <a href="#" class="sns-item">
+                                <img src="./images/main/sns/sns10.png" alt="SNS 이미지">
+                                <div class="sns-overlay">
+                                    <span class="sns-icon instagram" aria-label="인스타그램"></span>
+                                </div>
+                            </a>
+
+                        </div><!-- .sns-track -->
+                    </div><!-- .sns-slider -->
+
+                </div><!-- .sns-inner -->
+            </section>
+            <!-- sns E -->
+
+        </div>
+        <!-- container E -->
+
+        <!-- footer S -->
+        <section id="footer-area">
+
+            <div class="footer-wrap">
+
+                <!-- 풍경 애니메이션 영역 -->
+                <div class="footer-landscape">
+                    <!-- 하늘 + 태양 -->
+                    <div class="footer-sky">
+                        <div class="footer-sun"></div>
+                    </div>
+
+                    <!-- 섬 -->
+                    <div class="footer-island"></div>
+
+                    <!-- 파도 SVG -->
+                    <svg class="wave-svg" viewBox="0 0 2 1" preserveAspectRatio="none">
+                        <defs>
+                            <path id="wave-path" d="
+                                                m0 1v-.5 
+                                                q.5.5 1 0
+                                                t1 0 1 0 1 0
+                                                v.5z" />
+                        </defs>
+
+                        <g class="wave-group">
+                            <use href="#wave-path" y="0" fill="#FFA75A" />
+                            <use href="#wave-path" y="0.1" fill="#AFCAEF" />
+                            <use href="#wave-path" y="0.2" fill="#172742" />
+                        </g>
+                    </svg>
+
+                </div><!-- .footer-landscape -->
+            </div><!-- .footer-wrap -->
+
+            <!-- 하단 footer -->
+            <footer id="footer">
+                <div class="footer-inner">
+
+                    <!-- 좌측 로고 -->
+                    <div class="footer-left">
+                        <a href="./index.html">
+                            <h1 class="footer-logo">
+                                <img src="./images/footer/logo_grey.svg" alt="서쪽마실">
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 중앙 정보 -->
+                    <div class="footer-center">
+                        <p><strong>고객센터</strong> 051-245-1650</p>
+                        <p><strong>비즈니스</strong> westbusan_masil@gmail.com</p>
+
+                        <div class="footer-sns">
+                            <a href="#" aria-label="Instagram" class="sns insta"></a>
+                            <a href="#" aria-label="Youtube" class="sns youtube"></a>
+                            <a href="#" aria-label="Naver" class="sns naver"></a>
+                        </div>
+                    </div>
+
+                    <!-- 우측 링크 -->
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">사업자정보조회</a>
+                        </div>
+
+                        <p class="footer-info">
+                            서쪽마실 | 사업자등록번호 : 871-87-02570<br>
+                            통신판매업신고번호 : 부산중구 0058 | 주소 : 부산 중구 중앙대로 26 10층
+                        </p>
+
+                        <p class="copyright">
+                            COPYRIGHT © Seojok Masil. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+                </div><!-- .footer-inner -->
+            </footer>
+        </section>
+        <!-- footer E -->
+
+        <!-- TOP 버튼 -->
+        <button class="btn-top" type="button" aria-label="페이지 상단으로 이동">
+            TOP
+        </button>
+
+    </div><!-- #wrap -->
+
+    <!-- jQuery 오픈소스 : 로컬방식 -->
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- 제어구문 연결 -->
+    <script src="js/script.js"></script>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS 제어구문 -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

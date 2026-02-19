@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>서쪽마실</title>
+    <!-- 웹폰트 연결 -->
+    <!-- font-family: "Pretendard Variable"; -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <!-- font-family: 'NanumSquareRoundLight', 'NanumSquareRound', 'NanumSquareRoundBold', 'NanumSquareRoundExtraBold';  -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/header/favicon.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style_sub2.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header S -->
+        <div id="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./images/header/logo.svg" alt="서쪽마실 logo">
+                </a>
+            </h1>
+
+            <ul class="util">
+                <li>
+                    <div class="search_bar">
+                        <form action="" method="get">
+                            <input type="search" name="search" id="search" placeholder="검색">
+                        </form>
+                    </div><!-- .search_bar -->
+                </li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul><!-- .util -->
+
+            <div id="nav">
+                <ul class="gnb">
+                    <li><!-- 1 -->
+                        <a href="./sub1.html">여행 안내</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">지역별 안내</a></li>
+                            <li><a href="#">유형별 안내</a></li>
+                            <li><a href="#">여행 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 2 -->
+                        <a href="./sub2.html">코스 추천</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">테마별 안내</a></li>
+                            <li><a href="#">일정별 코스</a></li>
+                            <li><a href="#">맞춤 추천</a></li>
+                        </ul>
+                    </li>
+                    <li><!-- 3 -->
+                        <a href="./sub3.html">로컬 이야기</a>
+                        <!-- submenu -->
+                        <ul class="submenu">
+                            <li><a href="#">동네 이야기</a></li>
+                            <li><a href="#">로컬 가게</a></li>
+                            <li><a href="#">사람들</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sub4.html">서쪽마실 소개</a></li>
+                </ul><!-- .gnb -->
+            </div><!-- .nav -->
+
+        </div><!-- #header -->
+        <!-- header E -->
+
+        <!-- sub visual S -->
+        <section class="sub-visual">
+            <div class="sub-visual-inner">
+                <p>코스 추천</p>
+                <h2>맞춤 추천</h2>
+            </div>
+        </section>
+        <!-- sub visual E -->
+
+        <!-- course section -->
+        <section class="course-section">
+            <div class="course-inner">
+
+                <!-- left filter -->
+                <aside class="course-filter">
+                    <img src="./images/sub2/sub2_icon1.svg" alt="아이콘" class="filter-title-img">
+
+                    <h3 class="filter-title">코스 추천</h3>
+
+                    <div class="filter-group">
+                        <a href="#">
+                            <p class="filter-label">테마별</p>
+                        </a>
+                        <ul class="filter-submenu">
+                            <li><a href="#">노을 코스</a></li>
+                            <li><a href="#">자연·생태 코스</a></li>
+                            <li><a href="#">동네산책 코스</a></li>
+                            <li><a href="#">미식 코스</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <a href="#">
+                            <p class="filter-label">일정별</p>
+                        </a>
+                        <ul class="filter-submenu">
+                            <li><a href="#">반나절 코스</a></li>
+                            <li><a href="#">하루 코스</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <a href="#">
+                            <p class="filter-label accent">맞춤 추천</p>
+                        </a>
+                        <ul class="filter-submenu">
+                            <li><a href="#">혼자여행</a></li>
+                            <li><a href="#">우정여행</a></li>
+                            <li><a href="#">커플여행</a></li>
+                            <li><a href="#">가족여행</a></li>
+                            <li><a href="#">반려견 동반여행</a></li>
+                        </ul>
+                    </div>
+                </aside><!-- .course-filter -->
+
+                <!-- right content -->
+                <div class="course-content">
+                    <!-- course quote -->
+                    <section class="course-quote" data-aos="fade-left" data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <p class="quote-text">
+                            “여행은 목적지가 아니라, 함께 걷는 방식입니다.”
+                        </p>
+                        <span class="quote-sub">
+                            혼자, 친구, 연인, 가족, 반려동물과 함께하는 서쪽마실의 서로 다른 여정
+                        </span>
+                    </section>
+
+                    <!-- course list -->
+                    <div class="course-list">
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb1.png" alt="혼여행">
+                                </div>
+                                <div class="card-info">
+
+                                    <h4>[혼자여행👤] 혼자여도 충분히 좋은 시간</h4>
+                                    <p>나혼자 오롯이 즐기는 서부산의 모습들</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb2.png " alt="">
+                                </div>
+                                <div class="card-info">
+                                    <h4>[우정여행👯] 함께라서 즐거운 여행</h4>
+                                    <p>사진만큼 추억도 많이 남는 친구끼리 여행 코스</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb3.png" alt="혼여행">
+                                </div>
+                                <div class="card-info">
+                                    <h4>[커플여행💑] 함께라서 편안한 여행</h4>
+                                    <p>대화와 풍경이 이어지는 커플 마실 코스</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb4.png " alt="">
+                                </div>
+                                <div class="card-info">
+                                    <h4>[가족여행👨‍👩‍👧] 가족과 함께 쌓는 추억</h4>
+                                    <p>가족구성원 모두가 즐길 수 있는 가족형 코스</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb5.png" alt="혼여행">
+                                </div>
+                                <div class="card-info">
+                                    <h4>[반려견 동반여행🐕] 함께라서 더 느긋한 산책</h4>
+                                    <p>넓은 공간에서 마음껏 뛰노는 반려동물과의 하루</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="course-card">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="./images/sub2/sub2_thumb6.png " alt="">
+                                </div>
+                                <div class="card-info">
+                                    <h4>[무장애여행🌈] 모두를 위한 여행 코스</h4>
+                                    <p>유모차, 휠체어, 어르신 모두 이동에 제약없이 누리는 여행의 즐거움</p>
+
+                                    <div class="card-meta">
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon2.svg" alt="">
+                                            코스 안내
+                                        </span>
+                                        <span>
+                                            <img src="./images/sub2/sub2_icon3.svg" alt="">
+                                            코스 소요시간
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                    </div><!-- .course-list -->
+                </div><!-- .course-content -->
+            </div><!-- .course-inner -->
+        </section><!-- .course-section -->
+
+
+        <!-- footer S -->
+        <section id="footer-area">
+
+            <!-- 하단 footer -->
+            <footer id="footer">
+                <div class="footer-inner">
+
+                    <!-- 좌측 로고 -->
+                    <div class="footer-left">
+                        <a href="./index.html">
+                            <h1 class="footer-logo">
+                                <img src="./images/footer/logo_grey.svg" alt="서쪽마실">
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 중앙 정보 -->
+                    <div class="footer-center">
+                        <p><strong>고객센터</strong> 051-245-1650</p>
+                        <p><strong>비즈니스</strong> westbusan_masil@gmail.com</p>
+
+                        <div class="footer-sns">
+                            <a href="#" aria-label="Instagram" class="sns insta"></a>
+                            <a href="#" aria-label="Youtube" class="sns youtube"></a>
+                            <a href="#" aria-label="Naver" class="sns naver"></a>
+                        </div>
+                    </div>
+
+                    <!-- 우측 링크 -->
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">사업자정보조회</a>
+                        </div>
+
+                        <p class="footer-info">
+                            서쪽마실 | 사업자등록번호 : 871-87-02570<br>
+                            통신판매업신고번호 : 부산중구 0058 | 주소 : 부산 중구 중앙대로 26 10층
+                        </p>
+
+                        <p class="copyright">
+                            COPYRIGHT © Seojok Masil. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+                </div><!-- .footer-inner -->
+            </footer><!-- #footer -->
+        </section><!-- #footer-area -->
+        <!-- footer E -->
+
+        <!-- TOP 버튼 -->
+        <button class="btn-top" type="button" aria-label="페이지 상단으로 이동">
+            TOP
+        </button>
+
+    </div><!-- #wrap -->
+
+    <!-- jQuery 오픈소스 : 로컬방식 -->
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <!-- 제어코드 연결 -->
+    <script src="js/script_sub2.js"></script>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS 제어구문 -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
