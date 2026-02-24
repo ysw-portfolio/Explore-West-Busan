@@ -406,6 +406,27 @@ body {
     background-size: 18px 18px;
 }
 
+.footer-sns .sns {
+    transition: 0.3s ease;
+}
+
+/* 인스타 */
+.sns.insta:hover {
+    background-image: url("../images/footer/icon_instagram_orange.svg");
+}
+
+/* 유튜브 */
+.sns.youtube:hover {
+    background-image: url("../images/footer/icon_youtube_orange.svg");
+}
+
+/* 네이버 */
+.sns.naver:hover {
+    background-image: url("../images/footer/icon_naver_orange.svg");
+}
+
+
+
 /* ===== 우측 ===== */
 .footer-right {
     text-align: right;
